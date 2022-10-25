@@ -9,41 +9,40 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        val busana = findViewById<Button>(R.id.busana)
-        val kuliner = findViewById<Button>(R.id.kuliner)
-        val perangkatlunak = findViewById<Button>(R.id.perangkatlunak)
-        val teknikpengelasan = findViewById<Button>(R.id.teknikpengelasan)
-        val teknikotomotif = findViewById<Button>(R.id.teknikotomotif)
+        val busana = findViewById<Button>(R.id.btn_busana)
+        val kuliner = findViewById<Button>(R.id.btn_kuliner)
+        val perangkatlunak = findViewById<Button>(R.id.btn_pplg)
+        val teknikotomotif = findViewById<Button>(R.id.btn_to)
+        val teknikpengelasan = findViewById<Button>(R.id.btn_tpfl)
 
 
         busana.setOnClickListener {
             val fragmentTransaction = supportFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragmentcontainer, busana())
+            fragmentTransaction.replace(R.id.fragmentContainer, busana())
             fragmentTransaction.commit()
         }
 
         kuliner.setOnClickListener {
             val fragmentTransaction = supportFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragmentcontainer, kuliner())
+            fragmentTransaction.replace(R.id.fragmentContainer, kuliner())
             fragmentTransaction.commit()
         }
 
         perangkatlunak.setOnClickListener {
             val fragmentTransaction = supportFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragmentcontainer, perangkatlunak())
-            fragmentTransaction.commit()
-        }
-
-        teknikpengelasan.setOnClickListener {
-            val fragmentTransaction = supportFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragmentcontainer, teknikpengelasan())
+            fragmentTransaction.replace(R.id.fragmentContainer, perangkatlunak())
             fragmentTransaction.commit()
         }
 
         teknikotomotif.setOnClickListener {
             val fragmentTransaction = supportFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragmentcontainer, teknikotomotif())
+            fragmentTransaction.replace(R.id.fragmentContainer, teknikotomotif())
+            fragmentTransaction.commit()
+        }
+
+        teknikpengelasan.setOnClickListener {
+            val fragmentTransaction = supportFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.fragmentContainer, teknikpengelasan())
             fragmentTransaction.commit()
         }
         }
